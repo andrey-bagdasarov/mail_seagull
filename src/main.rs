@@ -1,5 +1,9 @@
-mod ui;
+use iced::{Sandbox, Settings};
+use crate::mail_seagull::MailSeagull;
 
-fn main() {
-    println!("Hello, world!");
+mod ui;
+mod mail_seagull;
+
+fn main() -> iced::Result {
+    MailSeagull::run(Settings::default())
 }
